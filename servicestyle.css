@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Playfair+Display:wght@400;500;600&family=Poppins:ital,wght@1,200&family=Raleway:wght@200;400&display=swap');
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-family: 'Playfair Display', serif;
+   scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+.numbers {font-family: 'Lora', sans-serif;}
+
+  .name {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 7px #fff3ed;
+  }
+  
+  .sticky {
+    position: fixed;
+    padding: 10px;
+    height: 50px;
+    background-color: black;
+    border-bottom: 1px solid black;
+    transition: 1.3s ease-in-out;
+  }
+  
+  .sticky a {
+    color: #fff3ed;
+    transition: all 1s ease;
+    text-shadow: 0px 0px 12px #fff3ed;
+  }
+  
+  .sticky .rose {
+    display: none;
+    transition: all 0.2s;
+  }
+
+  nav {
+    display: flex;
+    font-weight: 500;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.1);
+    border-bottom: 1px solid #FFC0CB;
+    transition: all 1s ease;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 70%;
+    max-width: 1070px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  .left-container, .right-container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 31vw;
+    z-index: 1;
+  }
+
+  .left-container {
+    justify-content: flex-start;
+  }
+  
+  .right-container {
+    justify-content: flex-end;
+  }
+  
+  .nav-left, .nav-right {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    flex-basis: 500px;
+    align-items: center;
+  }
+
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    display: flex;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 500;
+    text-shadow: 0px 0px 5px black;
+  }
+
+  .underline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333333;
+    transition: width 0.40s ease-out;
+  }
+  
+  .underline:hover::before { width: 100%; }
+
+  .fb-icon { 
+    background: none;
+    border: none;
+  }
+
+  .fb-link {font-size: 30px; transition: all 0.4s ease-in-out}
+
+  .fb-link:hover {
+    text-shadow: 0 0 10px #fff3ed;
+    transition: all 0.4s ease-in-out;  
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    background-color: rgb(8, 8, 8);
+    color: white;
+    overflow: hidden;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex:1;
+  }
+  
+  .footer-info {
+    font-size: 15px;
+  }
+
+  .bars, .hamburger, .mobile {
+    display: none;
+   }
+
+    /* --- defaults^ --- */
+
+   /* --- styling for main page --- */
+
+   .main-page {
+    background: linear-gradient(316deg, rgba(255,243,237,0.9) 50%, rgba(202,163,142,0.3) 0%);
+    color: #333333;
+   }
+
+   h1 {
+    text-align: center;
+    padding: 15rem 0 3rem 0;
+    font-size: 4.5vw;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  .accordion {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 15rem 0;
+  }
+
+  .accordion-container {
+    width: 55%;
+    min-width: 500px;
+    margin-top: 10px;
+  }
+
+  .wrapper {
+    background-color: white;
+    padding: 1px 25px;
+    border-radius: 3px;
+    border: 1px solid #333333;
+  }
+
+  .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    font-family: Lora;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 15px 0;
+    width: 100%;
+  }
+
+  .content {
+    position: relative;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 30px;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+  }
+
+  @media (max-width: 767px) {
+
+    /* --- default prerequisites --- */
+
+     .footer-info {font-size: 12px;}
+     .fb-link {font-size: 23px;}
+
+     nav {
+       display: none;
+     }
+
+     .bars {
+      display: block;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 80px;
+      background-color: white;
+      z-index: 1;
+      border-bottom: 1px solid black;
+   }
+    
+   .hamburger {
+      display: block;
+      position: relative;
+      top: 20px;
+      left: 87%;
+      width: 30px;
+      height: 35px;
+      cursor: pointer;
+      appearance: none;
+      background: none;
+      border: none; 
+   }
+   
+   .hamburger .bar, .hamburger::after, .hamburger::before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      margin: 6px 0px;
+      transition: 0.9s;
+   }
+   
+   .hamburger.is-active::before {
+      transform: rotate(-44deg) translate(-6px, 6px);
+   }
+   
+   .hamburger.is-active::after {
+      transform: rotate(45deg) translate(-5px, -5px);
+   }
+   
+   .hamburger.is-active .bar {
+      opacity: 0;
+   }
+  
+   .mobile {
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(3px);
+    padding-top: 80px;
+    transition: 1s;
+    overflow: hidden;
+  }
+  
+   .mobile.is-active{
+    left: 0;
+    overflow: hidden;
+  }
+  
+   .page-link {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    padding: 10px 5px;
+    margin: 0 auto 10px;
+    text-align: center;
+    border-radius: 2px;
+    color: #333333;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    text-shadow: none;
+    text-transform: none;
+  }
+
+  /* --- defaults^ --- */
+
+  /* --- styling for page --- */
+
+  .accordion {
+    padding: 0 0 10rem 0;
+  }
+
+  .accordion-container {
+      width: 30%;
+      min-width: 320px;
+  }
+
+  h1 {font-size: 14vw;}
+
+
+}

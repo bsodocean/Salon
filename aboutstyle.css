@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Playfair+Display:wght@400;500;600&family=Poppins:ital,wght@1,200&family=Raleway:wght@200;400&display=swap');
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-family: 'Playfair Display', serif;
+   scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+.numbers {font-family: 'Lora', sans-serif;}
+
+  .name {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 7px #fff3ed;
+  }
+  
+  .sticky {
+    position: fixed;
+    padding: 10px;
+    height: 50px;
+    background-color: black;
+    border-bottom: 1px solid black;
+    transition: 1.3s ease-in-out;
+  }
+  
+  .sticky a {
+    color: #fff3ed;
+    transition: all 1s ease;
+    text-shadow: 0px 0px 12px #fff3ed;
+  }
+  
+  .sticky .rose {
+    display: none;
+    transition: all 0.2s;
+  }
+
+  nav {
+    display: flex;
+    font-weight: 500;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.1);
+    border-bottom: 1px solid #FFC0CB;
+    transition: all 1s ease;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 70%;
+    max-width: 1070px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  .left-container, .right-container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 31vw;
+    z-index: 1;
+  }
+
+  .left-container {
+    justify-content: flex-start;
+  }
+  
+  .right-container {
+    justify-content: flex-end;
+  }
+  
+  .nav-left, .nav-right {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    flex-basis: 500px;
+    align-items: center;
+  }
+
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    display: flex;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 500;
+    text-shadow: 6px 3px 3px black;
+  }
+
+  .underline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #FFC0CB;
+    transition: width 0.40s ease-out;
+  }
+  
+  .underline:hover::before { width: 100%; }
+
+  .fb-icon { 
+    background: none;
+    border: none;
+  }
+
+  .fb-link {font-size: 30px; transition: all 0.4s ease-in-out}
+
+  .fb-link:hover {
+    text-shadow: 0 0 10px #fff3ed;
+    transition: all 0.4s ease-in-out;  
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    background-color: rgb(8, 8, 8);
+    color: white;
+    overflow: hidden;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex:1;
+  }
+  
+  .footer-info {
+    font-size: 15px;
+  }
+
+  .bars, .hamburger, .mobile {
+    display: none;
+   }
+
+   /* --- styling for first page(1st) --- */
+
+   .first {
+       background-color: #fff3ed;
+   }
+
+   .page1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 150px 60px 150px 60px;
+   }
+
+   .page-content {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    max-width: 38.8rem;
+    margin-bottom: 15rem;
+    font-size: 1vw;
+    word-spacing: 5px;
+    line-height: 35px;
+    color: #333333;
+   }
+
+   h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    text-decoration: 1px #333333 underline;
+    text-underline-offset: 10px;
+    padding-bottom: 25px;
+   }
+
+
+
+   .salon-img {
+       max-width: 40vw;
+       width: 100%;
+       margin-bottom: 5rem;
+   }
+
+   /* --- (1st) --- */
+
+   /* --- styling for second page(2nd) --- */
+
+   .second {
+     background-color: #333333;
+   }
+
+   .page2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 11rem 0 9rem 0;
+   }
+
+   .page2-content {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    font-size: 1.1vw;
+    word-spacing: 5px;
+    line-height: 35px;
+    color: #fff3ed;
+   }
+
+
+   h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    padding-bottom: 25px;
+    text-decoration: 1px white underline;
+    text-underline-offset: 10px;
+  }
+
+
+
+  /* --- (2nd) --- */
+
+  .third {
+    background-color: #fff3ed;
+  }
+
+  .visit-img {max-width: 30vw; min-width: 18vw;}
+
+  .page3 {
+    color: #333333;
+    padding: 150px 0px 200px 0px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 4rem;
+    font-weight: 400;
+    text-decoration: 1px #333333 underline;
+    text-underline-offset: 10px;
+  }
+
+  .text3 {
+    word-spacing: 5px;
+    line-height: 35px;
+    font-size: 25px;
+    width: 605px;
+    margin-top: 50px;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem 0 1rem 0;
+   }
+
+   @media (max-width: 767px) {
+
+    /* --- default prerequisites --- */
+
+     .footer-info {font-size: 14px;}
+     .fb-link {font-size: 25px;}
+
+     nav {
+       display: none;
+     }
+
+     .bars {
+      display: block;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 80px;
+      background-color: white;
+      z-index: 1;
+      border-bottom: 1px solid black;
+   }
+    
+   .hamburger {
+      display: block;
+      position: relative;
+      top: 20px;
+      left: 87%;
+      width: 30px;
+      height: 35px;
+      cursor: pointer;
+      appearance: none;
+      background: none;
+      border: none; 
+   }
+   
+   .hamburger .bar, .hamburger::after, .hamburger::before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: #580000;
+      margin: 6px 0px;
+      transition: 0.9s;
+   }
+   
+   .hamburger.is-active::before {
+      transform: rotate(-44deg) translate(-6px, 6px);
+   }
+   
+   .hamburger.is-active::after {
+      transform: rotate(45deg) translate(-5px, -5px);
+   }
+   
+   .hamburger.is-active .bar {
+      opacity: 0;
+   }
+  
+   .mobile {
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(3px);
+    padding-top: 80px;
+    transition: 1s;
+    overflow: hidden;
+  }
+  
+   .mobile.is-active{
+    left: 0;
+    overflow: hidden;
+  }
+  
+   .page-link {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    padding: 12px 16px;
+    margin: 0 auto 16px;
+    text-align: center;
+    border-radius: 2px;
+    color: #333333;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    text-shadow: none;
+    text-transform: none;
+  }
+
+  /* --- (default) --- */
+
+  /* --- Styling for mobile 1st page(1st) --- */
+
+     .page1, .page2 {
+       justify-content: center;
+       align-items: center;
+     }
+
+     .page1 {
+       flex-direction: column-reverse;
+       padding: 10rem 0 0 0;
+     }
+
+     .page2 {
+       flex-direction: column;
+       padding: 3rem 0 2rem 0;
+     }
+
+     .page3 {
+        padding: 5rem 0 7rem 0;
+     }
+
+     .page-content, .page2-content {
+       text-align: center;
+       margin-bottom: 2rem;
+       line-height: 30px;
+       word-spacing: 2px;
+       max-width: 90vw;
+       font-size: 4.3vw;
+     }
+
+     .salon-img {
+       min-width: 85vw;
+     }
+
+     /* --- (1st) --- */
+
+     h1, h2, h3 {
+      font-size: 10vw;
+    }
+
+     /* --- styling for third page (3rd) --- */ 
+
+     .visit-img {
+       min-width: 85vw;
+     }
+
+     .img-container {
+       gap: 20px;
+     }
+
+     .text3 {
+       max-width: 350px;
+       font-size: 1rem;
+       margin-top: 2rem;
+     }
+
+     /* --- (3rd) --- */
+
+   }
+
+   

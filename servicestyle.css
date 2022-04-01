@@ -169,9 +169,13 @@ body {
     color: #333333;
    }
 
+   .page-content {
+     background-color: #FFD4C7;
+   }
+
    h1 {
     text-align: center;
-    padding: 15rem 0 3rem 0;
+    padding: 15rem 0 20rem 0;
     font-size: 4.5vw;
     font-weight: 400;
     letter-spacing: 2px;
@@ -182,7 +186,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 0 0 15rem 0;
+    padding: 10rem 0 15rem 0;
   }
 
   .accordion-container {
@@ -228,6 +232,7 @@ body {
 
      .footer-info {font-size: 12px;}
      .fb-link {font-size: 23px;}
+     footer {height: 65px;}
 
      nav {
        display: none;

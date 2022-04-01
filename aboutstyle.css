@@ -280,6 +280,7 @@ body {
 
      .footer-info {font-size: 14px;}
      .fb-link {font-size: 25px;}
+     footer {height: 65px;}
 
      nav {
        display: none;

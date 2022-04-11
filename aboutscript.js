@@ -12,6 +12,7 @@ window.addEventListener("scroll", function() {
   navbar.classList.toggle("sticky", window.scrollY > 0);
 });
 
+
 window.onload = () => {
   const anchors = document.querySelectorAll('a');
   const transition_el = document.querySelector('.transition');
@@ -25,7 +26,7 @@ window.onload = () => {
 
     anchor.addEventListener('click', e => {
       e.preventDefault();
-      let target = e.currentTarget.href;
+      let target = e.target.href;
 
       console.log(transition_el);
 

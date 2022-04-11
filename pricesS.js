@@ -25,7 +25,7 @@ window.onload = () => {
 
     anchor.addEventListener('click', e => {
       e.preventDefault();
-      let target = e.currentTarget.href;
+      let target = e.target.href;
 
       console.log(transition_el);
 

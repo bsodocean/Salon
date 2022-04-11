@@ -9,6 +9,7 @@
 html {
    font-family: 'Playfair Display', serif;
    scroll-behavior: smooth;
+   overflow-y: visible;
 }
 
 .main-img {
@@ -25,6 +26,7 @@ html {
   height: 50px;
   background-color: black;
   border-bottom: 1px solid black;
+  transition: all 1.5s ease-in-out;
 }
 
 .sticky a {
@@ -32,13 +34,31 @@ html {
   transition: all 1s ease;
   text-shadow: 0px 0px 12px #fff3ed;
   font-size: 1rem;
+  transition: 1.5s;
 }
 
-.sticky .rose {
-  visibility: hidden;
-  transition: all 0.2s;
+.sticky a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: white;
+  transition: width 0.40s ease-out;
+  }
+
+  .sticky a:hover::before { width: 100%; }
+
+.sticky .logo {
+  display: none;
+  transition: 5s ease-out;
 }
 
+.anchorv {
+  text-decoration: none;
+  color: #1a1110;
+}
 
 
 nav {
@@ -49,10 +69,15 @@ nav {
     position: fixed;
     width: 100%;
     height: 90px;
-    z-index: 1;
-    background-color: rgba(0,0,0,0.1);
+    z-index: 5;
+    background-color: white;
     border-bottom: 1px solid #FFC0CB;
-    transition: all 1s ease;
+    transition: all 1s ease-in-out;
+  }
+
+  .logo {
+    width: 8vw;
+    margin-top: 5px;
   }
 
   .container {
@@ -96,11 +121,10 @@ nav {
     display: flex;
     font-size: 18px;
     text-decoration: none;
-    color: white;
+    color: black;
     text-transform: uppercase;
     position: relative;
     font-weight: 500;
-    text-shadow: 6px 3px 3px black;
   }
 
   .underline::before {
@@ -109,8 +133,8 @@ nav {
     left: 0;
     bottom: 0;
     width: 0;
-    height: 1px;
-    background-color: #FFC0CB;
+    height: 1.5px;
+    background-color: black;
     transition: width 0.40s ease-out;
   }
   
@@ -176,7 +200,7 @@ nav {
 
  .second {
   background: linear-gradient(316deg, rgba(255,243,237,0.9) 45%, rgba(202,163,142,0.3) 0%);
-  color: #333333;
+  color: #1a1110;
  }
 
 .services {
@@ -235,6 +259,7 @@ nav {
   align-items: center;
   flex-direction: column;
   padding: 1.5rem 0 1rem 0;
+  color: #1a1110;
 }
 
 .icon {
@@ -297,7 +322,7 @@ footer {
 }
 
 .footer-info {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .name {
@@ -307,10 +332,11 @@ footer {
 }
 
 
+
+
 .poukaz {
-  max-width: 700px;
   width: 95%;
-  height: auto;
+  max-width: 700px;
   border-radius: 10px;
   -webkit-user-drag: none;
 }
@@ -331,12 +357,13 @@ footer {
 @media (max-width: 767px) {
 
   .background-container {
-    background-image: url(https://lh3.googleusercontent.com/3eIvj-q_zEBkpGiai5y9AtXdnMRzvBKudNsKD3_dkfnHpFjJCv7ffnfWMB4BlVl4W7_n3dNjOEu8cN4Mk9XU0o3xMeSUsRtDsosYjY9o2k2hiPwKwi6WnlQVVHsJf4oGxiObqCXNgLd1UKEYxpmiSQjzOPtk3f13leUeUaqcq_50y96IIGreYJ_xwFQOtweVfZOseDOgUaWwhCVSFlUNHxRX8OkV1rCAvmal560u94mk61B8bV4i1VxAvPVgSDugzvHyaWURXSn1e0kd9wAFWDL6CvGXdZcM4HnaOQjsPCH31P5mVEhkXPcqkPaeBhtTCDZ9Ucqc4WUCoq46bh41yN7DGCFvd8Wxst2nSlg2b8bR9sVkEoQHRggo7jUN_dgBX6LtQukbKUK9FnW3dmcXIBTP0uPzu-g6-f7WQ-Z1YhNStYplqoXGr8dtWukyB4CptS8kn5vlUCmcb8nlH0Nrht27A_8E09dpBYw9krkMN_2sfu2j21h83sOk0Bi32unyLoM-1Nwdalsfp3cZZfVrO2IWZC8Uw8shSGWPLG98U4jj0meS90vsqu5PLL8YUR6YF70r0dk5d4recnkE0MgyJGlK1ELzRxouZr5Yux8h8qswBTOgVqqJYGNe2LznJoRuFcBcha4zRsdrno9WPd3K6_UdHchew2i7RFkGlX0xy-9GDM9KqlCKAxYMWUYBSS9T9A4a19aA3AZjPcfh8oUKN6s=w1469-h979-no?authuser=0);
+    background-image: url('smoothie.jpg');
     transition: all 2s;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
+
 
   .background-container::before {
     filter: blur(5px);
@@ -351,21 +378,28 @@ footer {
   .fb-link {font-size: 23px; color: white;}
   footer {height: 65px;}
 
+  .logo-mobile {
+    width: 8rem;
+    display: flex;
+    margin: 0 auto;
+  }
+
   .bars {
     display: block;
     position: absolute;
     top: 0px;
     width: 100%;
     height: 80px;
-    background-color: #F0FFFF;
-    z-index: 1;
+    background-color: white;
+    z-index: 6;
+    border-bottom: 1px solid black;
  }
   
  .hamburger {
     display: block;
     position: relative;
-    top: 20px;
-    left: 87%;
+    bottom: 68px;
+    left: 88%;
     width: 30px;
     height: 35px;
     cursor: pointer;
@@ -399,15 +433,15 @@ footer {
  .mobile {
   display: block;
   position: fixed;
-  top: 80px;
+  top: 20px;
   left: 100%;
   width: 100%;
   min-height: 100vh;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(3px);
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(5px);
   padding-top: 80px;
-  transition: 1s;
+  transition: 1.3s;
   overflow: hidden;
 }
 
@@ -416,14 +450,15 @@ footer {
   overflow: hidden;
 }
 
- .page-link {
+.page-link {
   display: block;
   width: 100%;
   max-width: 200px;
-  padding: 12px 16px;
-  margin: 0 auto 15px;
+  padding: 15px 5px;
+  margin: 0 auto 10px;
   text-align: center;
-  color: #333333;
+  border-radius: 2px;
+  color: #1a1110;
   text-decoration: none;
   font-size: 28px;
   text-shadow: none;
@@ -434,15 +469,6 @@ footer {
   flex-direction: column;
 }
 
-.main-img::before { 
-  box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
-}
-
-.main-img {
-  width: 300px;
-  display: block;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
-}
 
 .services > .service-info {  
     text-align: left;
@@ -471,11 +497,6 @@ h4 {
   font-size: 8vw;
 }
 
-.poukaz-holder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .voucher-info {
   font-size: 15px;
@@ -486,12 +507,18 @@ h4 {
 
 .poukaz {
   width: 95%;
+  display: flex;
+  margin: 0 auto;
 }
 
 .info-card {
   max-width: 15rem;
 }
- 
+
+
+.cards-holder {
+  margin-left: 20px;
+}
 
 
   

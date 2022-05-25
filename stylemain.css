@@ -357,7 +357,7 @@ footer {
 @media (max-width: 767px) {
 
   .background-container {
-    background-image: url('smoothie.jpg');
+    background-image: url(https://lh3.googleusercontent.com/3eIvj-q_zEBkpGiai5y9AtXdnMRzvBKudNsKD3_dkfnHpFjJCv7ffnfWMB4BlVl4W7_n3dNjOEu8cN4Mk9XU0o3xMeSUsRtDsosYjY9o2k2hiPwKwi6WnlQVVHsJf4oGxiObqCXNgLd1UKEYxpmiSQjzOPtk3f13leUeUaqcq_50y96IIGreYJ_xwFQOtweVfZOseDOgUaWwhCVSFlUNHxRX8OkV1rCAvmal560u94mk61B8bV4i1VxAvPVgSDugzvHyaWURXSn1e0kd9wAFWDL6CvGXdZcM4HnaOQjsPCH31P5mVEhkXPcqkPaeBhtTCDZ9Ucqc4WUCoq46bh41yN7DGCFvd8Wxst2nSlg2b8bR9sVkEoQHRggo7jUN_dgBX6LtQukbKUK9FnW3dmcXIBTP0uPzu-g6-f7WQ-Z1YhNStYplqoXGr8dtWukyB4CptS8kn5vlUCmcb8nlH0Nrht27A_8E09dpBYw9krkMN_2sfu2j21h83sOk0Bi32unyLoM-1Nwdalsfp3cZZfVrO2IWZC8Uw8shSGWPLG98U4jj0meS90vsqu5PLL8YUR6YF70r0dk5d4recnkE0MgyJGlK1ELzRxouZr5Yux8h8qswBTOgVqqJYGNe2LznJoRuFcBcha4zRsdrno9WPd3K6_UdHchew2i7RFkGlX0xy-9GDM9KqlCKAxYMWUYBSS9T9A4a19aA3AZjPcfh8oUKN6s=w1469-h979-no?authuser=0);
     transition: all 2s;
     background-position: center;
     background-repeat: no-repeat;
@@ -391,7 +391,7 @@ footer {
     width: 100%;
     height: 80px;
     background-color: white;
-    z-index: 6;
+    z-index: 1;
     border-bottom: 1px solid black;
  }
   
@@ -433,7 +433,7 @@ footer {
  .mobile {
   display: block;
   position: fixed;
-  top: 20px;
+  top: 80px;
   left: 100%;
   width: 100%;
   min-height: 100vh;
@@ -515,10 +515,10 @@ h4 {
   max-width: 15rem;
 }
 
-.card {
-     margin: 0 auto;
-}
 
+.cards-holder {
+  margin-left: 20px;
+}
 
 
   
